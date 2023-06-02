@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "email": "hieu507@gmail.com",
+      "password": "$2a$10$Gf.LvMqh/AA.EhXAxAQUoevCOnNJN9ml/WtkFlQ.4Nl7hkb8rGRaC",
+      "firstname": "Nguyễn ",
+      "lastname": "Ngọc Hiếu",
+      "id": 1
+    },
+    {
+      "email": "nguyenngochieu28201@gmail.com",
+      "password": "$2a$10$3KwC/wjO4SyGBRCXG6NZVufaSUTu.QEYLOYeoHtKBmZaLRSac2Ao6",
+      "firstname": "Nguyễn ",
+      "lastname": "Ngọc Hiếu",
+      "id": 2
+    },
+    {
+      "email": "0981991421h@gmail.com",
+      "password": "$2a$10$qChEt1fNvAkUP9LNEmgX3.9YbSybTJjtjpCirhaAm7D1nNQQVyk6G",
+      "firstname": "Nguyễn ",
+      "lastname": "Ngọc Hiếu",
+      "id": 3
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "productName": "Iphone 11",
+      "price": 2000,
+      "quantity": 50,
+      "description": "Mo ta Iphone 11"
+    },
+    {
+      "id": 3,
+      "productName": "Iphone 14",
+      "price": 3000,
+      "quantity": 132,
+      "description": "Mo ta Iphone 14"
+    },
+    {
+      "productName": "Samsung ",
+      "price": "2000",
+      "quantity": "120",
+      "description": "Mo ta SamSung",
+      "id": 5
+    },
+    {
+      "productName": "Nokia",
+      "price": "1500",
+      "quantity": "214",
+      "description": "Mo ta Nokia",
+      "id": 6
+    }
+  ]
+}
