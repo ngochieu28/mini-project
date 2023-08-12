@@ -8,48 +8,188 @@
       "id": 1
     },
     {
-      "email": "nguyenngochieu28201@gmail.com",
-      "password": "$2a$10$3KwC/wjO4SyGBRCXG6NZVufaSUTu.QEYLOYeoHtKBmZaLRSac2Ao6",
+      "email": "zeno@gmail.com",
+      "password": "$2a$10$pYjdp9xlkPIxQSCgqIns2uq.SQHneL7QUBCa2jHZkhDwk67hnoime",
       "firstname": "Nguyễn ",
       "lastname": "Ngọc Hiếu",
       "id": 2
     },
     {
-      "email": "0981991421h@gmail.com",
-      "password": "$2a$10$qChEt1fNvAkUP9LNEmgX3.9YbSybTJjtjpCirhaAm7D1nNQQVyk6G",
+      "email": "agasdas@gmail.com",
+      "password": "$2a$10$Ha6JJYGakR/5poLwtuxCcOuYKRPriHJZdSZC3qNzrTz3Ra5NjnLta",
+      "firstname": "dfasd",
+      "lastname": "agsdfsd",
+      "id": 3
+    },
+    {
+      "email": "0705500701h@gmail.comád",
+      "password": "$2a$10$8G7Rap3/jpZqihw5nru8juT6R1U9NnW1kSdPhL/ZF9rrXAhbOryQ.",
       "firstname": "Nguyễn ",
       "lastname": "Ngọc Hiếu",
-      "id": 3
+      "id": 4
+    },
+    {
+      "email": "zen12dgso@gmail.com",
+      "password": "$2a$10$2mM/htxF1B/D5bqu8iyXWOmXIgAhAGehQ0FMtF4ykzMYsmBNUmFBi",
+      "firstname": "Nguyễn ",
+      "lastname": "Ngọc Hiếu",
+      "id": 5
+    },
+    {
+      "email": "gdfsf@gmail.com",
+      "password": "$2a$10$i4wStc9sqEOFR.HEJRnjLePH56C7.kGwXcXyBfUXNm.GzjZzRxiRq",
+      "firstname": "Nguyễn ",
+      "lastname": "Ngọc Hiếu",
+      "id": 6
+    },
+    {
+      "email": "dfdfsvdfvd@hgmai.com",
+      "password": "$2a$10$TVwnK09ei3Zav90fgY/FVuMNzMgLllxcZwjRNHT1agH/DzXdJK9pC",
+      "firstname": "asdvbfsvd",
+      "lastname": "vdfbsvd",
+      "id": 7
+    },
+    {
+      "email": "sadsa@gmailafasd",
+      "password": "$2a$10$hb72umVCsOqPRbiDCDjpMuZC4.KKiYOG.xmFwyXMKlWhllbgrIMCq",
+      "firstname": "sfasd",
+      "lastname": "asdsad",
+      "id": 8
+    },
+    {
+      "email": "nguyenngochieuasdasd28201@gmail.com",
+      "password": "$2a$10$ahsporrsg.lxC8Xd/4M5ROwT5jMnVkUA5LDzmvz0JEJolauuberuG",
+      "firstname": "Nguyễn ",
+      "lastname": "Ngọc Hiếu",
+      "id": 9
+    },
+    {
+      "email": "sbfdgnfhxngdfgsf@gmail.com",
+      "password": "$2a$10$6hg7XJu3DMqHpl/9u13U9ew2paX6NbJ0VDjOsKiXIuMVkvr2PZoOK",
+      "firstname": "dfbdgnfng",
+      "lastname": "sfdgfn",
+      "id": 10
+    },
+    {
+      "email": "dfghjhgdfsdf@gmail.com",
+      "password": "$2a$10$c6VJGbk32iu7qng06eI9BOnrHTVuZdlQG9pXz4oDvvxxtGFNuCiWm",
+      "firstname": "fdsf",
+      "lastname": "fgd",
+      "id": 11
     }
   ],
   "product": [
     {
       "id": 1,
-      "productName": "Iphone 11",
-      "price": 2000,
-      "quantity": 50,
+      "productName": "Iphone",
+      "price": "2000",
+      "quantity": "215",
       "description": "Mo ta Iphone 11"
-    },
-    {
-      "id": 3,
-      "productName": "Iphone 14",
-      "price": 3000,
-      "quantity": 132,
-      "description": "Mo ta Iphone 14"
     },
     {
       "productName": "Samsung ",
       "price": "2000",
       "quantity": "120",
       "description": "Mo ta SamSung",
-      "id": 5
+      "id": 2
     },
     {
       "productName": "Nokia",
       "price": "1500",
       "quantity": "214",
       "description": "Mo ta Nokia",
-      "id": 6
+      "id": 3
+    },
+    {
+      "description": "Mota Xiaomi",
+      "quantity": "123",
+      "price": 999,
+      "productName": "Xiaomi",
+      "id": 4
+    },
+    {
+      "id": 7,
+      "productName": "Iphone",
+      "price": "2000",
+      "quantity": "215",
+      "description": "Mo ta Iphone 11"
+    },
+    {
+      "productName": "Samsung ",
+      "price": "2000",
+      "quantity": "120",
+      "description": "Mo ta SamSung",
+      "id": 8
+    },
+    {
+      "id": 9,
+      "productName": "Iphone",
+      "price": "2000",
+      "quantity": "215",
+      "description": "Mo ta Iphone 11"
+    },
+    {
+      "productName": "Samsung ",
+      "price": "2000",
+      "quantity": "120",
+      "description": "Mo ta SamSung",
+      "id": 10
+    },
+    {
+      "productName": "Nokia",
+      "price": "1500",
+      "quantity": "214",
+      "description": "Mo ta Nokia",
+      "id": 11
+    },
+    {
+      "description": "Mota Xiaomi",
+      "quantity": "123",
+      "price": 999,
+      "productName": "Xiaomi",
+      "id": 12
+    },
+    {
+      "productName": "Samsung ",
+      "price": "2000",
+      "quantity": "120",
+      "description": "Mo ta SamSung",
+      "id": 13
+    },
+    {
+      "productName": "Nokia",
+      "price": "1500",
+      "quantity": "214",
+      "description": "Mo ta Nokia",
+      "id": 14
+    },
+    {
+      "id": 16,
+      "productName": "Iphone",
+      "price": "2000",
+      "quantity": "215",
+      "description": "Mo ta Iphone 11"
+    },
+    {
+      "description": "Mota SungSam",
+      "quantity": "234",
+      "price": 1214,
+      "productName": "Samsung ",
+      "id": 17
+    },
+    {
+      "description": "Mo ta REaMI",
+      "quantity": "125",
+      "price": 512,
+      "productName": "ReaMi",
+      "id": 18
+    },
+    {
+      "description": "iphone 14 Promax",
+      "quantity": 99991,
+      "price": 999,
+      "productName": "Xiaomi",
+      "id": 19
     }
   ]
 }

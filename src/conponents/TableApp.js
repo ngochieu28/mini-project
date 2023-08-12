@@ -10,6 +10,11 @@ import { Button } from '@mui/material';
 import { useState, useEffect } from 'react';
 import { AppConsumer } from '../store';
 import { SET_DATA } from '../store/action';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import { Link as LinkApp } from 'react-router-dom';
+import productApi from '../api/productApi';
+
 
 export default function TableApp({ product, column, setIsGetProduct }) {
 
@@ -22,15 +27,14 @@ export default function TableApp({ product, column, setIsGetProduct }) {
     const handelDelete = (id) => {
         console.log(id);
         deleteProduct(id)
-
     }
 
     const deleteProduct = async (id) => {
-        const res = await fetch(`http://localhost:3000/product/${id}`, {
-            method: 'DELETE'
-        })
+        const res = await productApi.deleteProduct(id)
         setIsGetProduct(id)
     }
+
+
 
     const renderTableCell = () => {
         if (product.length > 0) {
@@ -65,16 +69,21 @@ export default function TableApp({ product, column, setIsGetProduct }) {
                             <TableCell component="th" scope="row" align="center">
                                 {item.id}
                             </TableCell>
-                            <TableCell align="center">{item.productName}</TableCell>
+                            <LinkApp to={`${item.id}`}>
+                                <TableCell align="center">{item.productName}</TableCell>
+                            </LinkApp>
                             <TableCell align="center">{item.price}</TableCell>
                             <TableCell align="center">{item.quantity}</TableCell>
                             <TableCell align="center">{item.description}</TableCell>
-                            <TableCell align="center"><Button variant="contained" onClick={() => handelEdit(index)}>Edit</Button></TableCell>
-                            <TableCell align="center"><Button variant="contained" onClick={() => handelDelete(item.id)}>Delete</Button></TableCell>
+                            <TableCell align="center"><Button variant="outlined" onClick={() => handelEdit(index)} startIcon={<EditIcon />}>Edit</Button></TableCell>
+                            <TableCell align="center"> <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() => handelDelete(item.id)}>
+                                Delete
+                            </Button></TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
             </Table>
+
         </TableContainer>
     );
 }

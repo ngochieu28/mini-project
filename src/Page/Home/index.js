@@ -17,6 +17,8 @@ import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useCheckLogin } from '../../util'
+
 
 function Copyright() {
     return (
@@ -37,6 +39,7 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const defaultTheme = createTheme();
 
 export default function Album() {
+    useCheckLogin();
     return (
         <ThemeProvider theme={defaultTheme}>
             <CssBaseline />

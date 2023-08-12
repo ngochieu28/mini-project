@@ -13,6 +13,7 @@ const reducer = (state = initialState, action) => {
                 data: action.payload
             }
         }
+
         case "LIST": {
             return {
                 ...state,

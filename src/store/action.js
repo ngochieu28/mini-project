@@ -12,6 +12,7 @@ export const SET_LIST = (payload) => {
     }
 }
 
+
 export const TOGGLE_MENU = (payload) => {
     return {
         type: "OPEN",

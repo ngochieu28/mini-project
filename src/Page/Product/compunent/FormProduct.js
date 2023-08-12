@@ -5,19 +5,31 @@ import { Button } from '@mui/material';
 import Grid from '@mui/joy/Grid';
 import Container from '@mui/material/Container';
 import { AppConsumer } from '../../../store';
+import productApi from '../../../api/productApi';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
+
 
 
 export default function FormProduct({ setIsGetProduct }) {
     const [state, dispatch] = AppConsumer();
     const [isEdit, setIsEdit] = useState(null)
 
-    const { handleSubmit, control, reset, register, setValue } = useForm({
+    const schema = yup.object({
+        productName: yup.string().required('This field is required'),
+        price: yup.number().required('This field is required'),
+        quantity: yup.number().required('This field is required'),
+        description: yup.string().required('This field is required')
+    })
+
+    const { handleSubmit, control, reset, setValue, formState: { errors } } = useForm({
         defaultValues: {
             productName: "",
             price: "",
             quantity: "",
             description: ""
-        }
+        },
+        resolver: yupResolver(schema)
     });
 
     useEffect(() => {
@@ -29,41 +41,58 @@ export default function FormProduct({ setIsGetProduct }) {
         setIsEdit(state.data)
     }, [state.data])
 
-    const putProduct = async (data) => {
-        const res = await fetch(`http://localhost:3000/product/${state.data.id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        setIsGetProduct(data)
-    }
 
     const onSubmit = (data) => {
         if (isEdit) {
-            putProduct(data);
-
+            // putProduct(data);
+            updateProduct(data)
             setIsEdit(null)
         }
         else {
-            postProduct(data)
+            // postProduct(data)
+            addProduct(data)
         }
         reset();
     }
 
-    const postProduct = async (data) => {
-        if (!data.productName || !data.price) {
-            return;
-        }
-        const res = await fetch('http://localhost:3000/product', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        setIsGetProduct(data)
+
+    ///////////////////////// FETCH ////////////////////////////////////
+    // const postProduct = async (data) => {
+    //     if (!data.productName || !data.price) {
+    //         return;
+    //     }
+    //     const res = await fetch('http://localhost:3000/product', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(data)
+    //     })
+    //     setIsGetProduct(data)
+    // }
+
+    // const putProduct = async (data) => {
+    //     const res = await fetch(`http://localhost:3000/product/${state.data.id}`, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(data)
+    //     })
+    //     setIsGetProduct(data)
+    // }
+    //////////////////////////////////////////////////////////////////////
+
+    /////////////////////// AXIOS ////////////////////////////////////////
+    const addProduct = async (data) => {
+        let res = await productApi.addProduct(data)
+            .then(setIsGetProduct(data));
+
+    }
+
+    const updateProduct = async (data) => {
+        let res = await productApi.updateProduct(state.data.id, data)
+            .then(setIsGetProduct(data))
     }
 
     return (
@@ -79,7 +108,8 @@ export default function FormProduct({ setIsGetProduct }) {
                                     placeholder='ProductName'
                                     {...field}
                                     fullWidth
-                                    {...register("productName")}
+                                    helperText={errors.productName && errors.productName.message}
+                                    error={!!errors.productName}
                                 />
                             )} />
                         </Grid>
@@ -92,7 +122,8 @@ export default function FormProduct({ setIsGetProduct }) {
                                     {...field}
                                     fullWidth
                                     type='number'
-                                    {...register("price")}
+                                    helperText={errors.price && errors.price.message}
+                                    error={!!errors.price}
                                 />
                             )} />
                         </Grid>
@@ -105,7 +136,8 @@ export default function FormProduct({ setIsGetProduct }) {
                                     {...field}
                                     fullWidth
                                     type='number'
-                                    {...register("quantity")}
+                                    helperText={errors.quantity && errors.quantity.message}
+                                    error={!!errors.quantity}
                                 />
                             )} />
                         </Grid>
@@ -117,7 +149,8 @@ export default function FormProduct({ setIsGetProduct }) {
                                     placeholder='description'
                                     {...field}
                                     fullWidth
-                                    {...register("description")}
+                                    helperText={errors.description && errors.description.message}
+                                    error={!!errors.description}
                                 />
                             )} />
                         </Grid>
@@ -129,3 +162,4 @@ export default function FormProduct({ setIsGetProduct }) {
         </div>
     )
 }
+
